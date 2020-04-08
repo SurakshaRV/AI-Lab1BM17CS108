@@ -659,31 +659,6 @@ for query in knowledge_base.list_of_query:
                 print(term.term + ' = ' + binding.binding_dict[term.term])
         print('True')
 
-# # Backward chaining
-#for query in knowledge_base.list_of_query:
-#    print('?- ' + str(query))
-#    binding_list = knowledge_base.backward_chaining_ask(query)
-#    is_fail = True
-#    for binding in binding_list.binding_list:
-#        if binding.is_fail == False:
-#            is_fail = False
-#            for term in query.list_of_terms:
-#                if term.is_var:
-#                    print(term.term + ' = ' + binding.binding_dict[term.term])
-#    print(not is_fail)
 
-# Resolution
-# query_binding = knowledge_base.resolution()
-# for index in range(len(knowledge_base.list_of_query)):
-#     print('?- ' + str(knowledge_base.list_of_query[index]))
-#     list_of_binding = query_binding[index]
-#     is_fail = True
-#     for binding in list_of_binding.binding_list:
-#         if not binding.is_fail:
-#             is_fail = False
-#             for term in knowledge_base.list_of_query[index].list_of_terms:
-#                 if term.is_var:
-#                     print(term.term + ' = ' + binding.binding_dict[term.term])
-#     print(not is_fail)
 end = time.time()
 print(str(end - start))
